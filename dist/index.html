@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#55208c">
+  <meta name="description" content="แกลเลอรีภาพประกอบโพสต์ 24sEnergy สำหรับตรวจงาน เปิดดู และดาวน์โหลด">
+  <title>24sEnergy Social Gallery</title>
+  <link rel="icon" href="assets/brand/24senergy-logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="24sEnergy Social Gallery">
+      <img src="assets/brand/24senergy-logo.png" alt="24sEnergy">
+      <span>Social Gallery</span>
+    </a>
+    <a class="repo-link" href="https://github.com/Klaichit/MagicImage" target="_blank" rel="noreferrer">
+      GitHub <span aria-hidden="true">↗</span>
+    </a>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow">24sEnergy · Content Library</p>
+        <h1 id="page-title">พลังงานที่ซับซ้อน<br><em>เล่าให้เข้าใจง่าย</em></h1>
+        <p class="hero-text">รวมภาพประกอบโพสต์ Solar PV, BESS และ EV Charging ที่ปรับให้เป็นภาพลักษณ์เดียวกัน พร้อมใช้งานบนโซเชียลมีเดีย</p>
+      </div>
+      <div class="hero-status" aria-label="สถานะชุดภาพ">
+        <div><strong id="asset-count">24</strong><span>ภาพพร้อมใช้</span></div>
+        <div><strong id="topic-count">12</strong><span>หัวข้อ</span></div>
+        <div class="status-mark"><i></i><span>อัปเดตล่าสุด<br>ก.ย. 2026</span></div>
+      </div>
+    </section>
+
+    <section class="toolbar" aria-label="ค้นหาและกรองภาพ">
+      <label class="search">
+        <span class="sr-only">ค้นหาภาพ</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.15a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"/></svg>
+        <input id="search" type="search" placeholder="ค้นหาหัวข้อ เช่น ค่าไฟ, มอก., EV" autocomplete="off">
+      </label>
+      <div class="filters" id="filters" role="group" aria-label="หมวดหมู่">
+        <button class="filter is-active" type="button" data-filter="all">ทั้งหมด</button>
+      </div>
+      <p class="result-count" id="result-count" aria-live="polite"></p>
+    </section>
+
+    <section class="gallery" id="gallery" aria-label="ภาพทั้งหมด">
+      <p class="loading">กำลังโหลดภาพ…</p>
+    </section>
+    <p class="empty" id="empty" hidden>ไม่พบภาพที่ตรงกับคำค้นหา</p>
+  </main>
+
+  <footer>
+    <img src="assets/brand/24senergy-logo.png" alt="">
+    <p>Solar PV · BESS · EV Charging</p>
+    <p>© 2026 24sEnergy</p>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox">
+    <div class="lightbox-bar">
+      <div><p id="modal-date"></p><h2 id="modal-title"></h2></div>
+      <button class="icon-button" id="modal-close" type="button" aria-label="ปิด">×</button>
+    </div>
+    <div class="lightbox-stage">
+      <button class="nav-button prev" id="modal-prev" type="button" aria-label="ภาพก่อนหน้า">←</button>
+      <img id="modal-image" alt="">
+      <button class="nav-button next" id="modal-next" type="button" aria-label="ภาพถัดไป">→</button>
+    </div>
+    <div class="lightbox-actions">
+      <span id="modal-position"></span>
+      <a class="download-button" id="modal-download" download>ดาวน์โหลด PNG ↓</a>
+    </div>
+  </dialog>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
